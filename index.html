@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log In</title>
+</head>
+<body>
+    <form action="process.php" method="post">
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" id="txt_name" name="name"></td>
+            </tr>
+            <tr>
+                <td>Username</td>
+                <td><input type="text" id="txt_username" name="username"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" id="txt_password" name="password"></td>
+            </tr>
+            <tr>
+                <td><button onclick="signUp()">LOG IN</button></td>
+            </tr>
+        </table>
+    </form>
+    
+    <script>
+        function signUp() {
+            const name = document.getElementById("txt_name").value;
+            const user = document.getElementById("txt_username").value;
+            const pass = document.getElementById("txt_password").value;
+            
+            if (user!== "" && pass!== "" && name!== "") {
+                alert("OK");
+                // You can add your login logic here or send a request to a server-side script
+            } else {
+                alert("Please fill in all fields.");
+            }
+        }
+    </script>
+</body>
+</html>
